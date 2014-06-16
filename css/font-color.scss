@@ -1,0 +1,13 @@
+/* Font Size
+  ========================================================================== */
+
+@mixin font-size($sizeValue: 12 ){
+  font-size: $sizeValue + px; //fallback for old browsers
+  font-size: (0.125 * $sizeValue) + rem;
+}
+
+$font-header: Montez, Helvetica, sans-serif;
+$font-title: Montserrat, sans-serif;
+$font-body: Garamond, Adobe Garamond, Times New Roman, serif;
+$link-color: #529aa8;
+$secondary-color: #648f72;

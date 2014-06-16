@@ -1,0 +1,371 @@
+/*  
+Theme Name: Artifacts
+Theme URI: http://technosiren.com/artifacts/
+Description: Originally created for Brianna.org by TechnoSiren,based on the String Theory framework
+Version: 2.2
+Author: TechnoSiren
+Author URI: http://technosiren.com
+
+Text Domain: stringtheory
+Domain Path: /languages/
+Tags: black, blue, gray, silver, white, light, one-column, fluid-layout, responsive-layout, buddypress, custom-background, custom-colors, custom-header, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, microformats, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready
+
+License: GNU General Public License v3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+
+Artifacts WordPress Theme, Copyright 2014 Brianna Privett
+Artifacts is distributed under the terms of the GNU GPL
+*/
+
+@import "css/mixins.scss";
+@import "css/font-color.scss";
+
+html {
+    min-height: 100%;
+}
+ 
+body {
+	font-family: $font-body;
+	@include font-size(13);
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	min-height:900px;
+}
+
+h1, h2, h3 {
+	font-family: $font-header;
+}
+
+a {
+	color:$link-color;
+	text-decoration: none;
+}
+
+a:hover {
+	color: $secondary-color;
+}
+
+header h1 {
+	margin: auto;
+	width: 4em;
+}
+.circular-menu {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  @include opacity(0);
+  @include scale(0);
+  @include transition(all 0.4s ease-out);
+}
+
+.open.circle {
+  @include opacity(1);
+  @include scale(1);
+}
+
+.circle a {
+  text-decoration: none;
+  color: $secondary-color;
+  display: block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  margin: -20px -20px 0px 0px;
+  position: absolute;
+  text-align: center;
+  border: 1px solid $secondary-color;
+  @include border-radius(50%);
+
+}
+
+.circle a:hover, .icon-menu a:hover {
+  color: $link-color;
+  background-color: #cce3a7;
+}
+
+.menu-button {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  text-decoration: none;
+  text-align: center;
+  color: #444;
+  @include border-radius(50%);
+  display: block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  padding: 10px;
+  background: #dde;
+}
+
+.menu-button:hover {
+  background-color: #eef;
+}
+
+.icon-menu {
+	width: 300px;
+	margin: auto;
+	padding: 0;
+}
+.icon-menu a {
+  text-decoration: none;
+  color: $secondary-color;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  margin: 0px 10px 0px 0px;
+  text-align: center;
+  border: 1px solid $secondary-color;
+  @include border-radius(50%);
+
+}		
+
+.montez {
+	font-family: $font-header;
+}
+.montserrat {
+	font-family: $font-title;
+}
+#blog-content, #page-content, #sidebar {
+    width: 80%;
+	max-width: 30em;
+	margin: auto;
+}
+#blog-content article section.entry img, #page-content article section.entry img {
+	width: 100%;
+	height: 100%;
+	margin: auto;		}
+.post h2, .page h2 {
+	text-transform: uppercase;
+	margin: 10px auto;
+	text-align: center;
+}
+.meta-nav {
+	display: none;
+}
+.post .entry p {
+	font-family: $font-body;
+	line-height: 1.4em;
+	font-size: 95%;
+}
+abbr.posted_date {
+	font-style: italic;
+	font-size: 80%;
+	color: #999;
+	margin: 10px calc(50% - 52px);
+	width: 7em;
+}
+.navigation {
+	font-family: $font-header;
+}
+		
+#footer {
+  @include breakpoint(large) { 	min-height: 400px; }
+  @include breakpoint(medium) { min-height: 350px; }
+  @include breakpoint(small) { min-height: 250px; }
+	text-transform: uppercase;
+	font-family: $font-title;
+	padding: 100px 0px 0px 0px;
+	text-align:center;
+} 
+span.copyright {
+  @include breakpoint(large) { 	
+  		margin-top: calc(60% - 65px); 
+  		font-size: 90%;
+  }
+  @include breakpoint(medium) { 
+  		margin-top: calc(80% - 55px);
+		font-size: 90%;
+  		
+  }
+  @include breakpoint(small) { 
+ 		margin-top: calc(80% - 55px);
+		font-size: 60%; 
+  }
+	display: block;
+}
+
+
+.sticky {
+	font-size: 110%;
+}
+
+.bypostauthor {
+	font-size: 90%;
+	font-weight: bold;
+}
+
+/* Comments styles */
+
+ul.meta li { 
+	list-style:none; 
+	margin:0px 0px 0px -20px; 
+	font-size:90%; 
+}
+
+div#respond{  
+	text-align:left; 
+	margin:0px 0px 0px -150px;  
+}
+
+form#commentform {  
+	margin:0px 0px 0px 140px;  
+}
+	form#commentform fieldset {  
+	border-radius:16px; 
+	-moz-border-radius:16px; 
+	-webkit-border-radius:16px;  
+}
+			
+textarea#comment {  
+	max-width:470px;  
+}
+
+div.reply {  
+	margin:0px 0px 0px 10px; 
+}
+	
+img.avatar {  
+	float:left; 
+	margin:0px 6px 0px 0px  
+}
+
+.commentmetadata {  
+	font-size:80%;  
+}
+
+.even {  
+	background-color:#eee; 
+	padding:4px;  
+}
+
+/* eshop panel listings */
+
+ul.eshoppanels {  
+	list-style:none; 
+	margin:0; 
+	padding:0;  
+}
+ul.eshoppanels li {  
+	width:205px; 
+	list-style:none; 
+	float:left; 
+	margin:5px; 
+	padding:6px;  
+}
+
+#content ul.eshoppanels li a { 
+	text-decoration:none; 
+	display:block; 
+	padding:0 4px;  
+}
+#content ul.eshoppanels li a img {  
+	float:none; 
+	margin:0;  
+}
+
+.creditline {  
+	display:none;  
+}
+
+/* default gallery styles */
+
+.gallery {  
+	margin: auto;  
+}
+
+.gallery-item {  
+	width:33%; 
+	margin:10px 0px 0px; 
+	text-align:center; 
+	float:left;  
+}
+
+.gallery img {  
+	border:0px !important;  
+}
+
+.gallery-caption {  
+	margin:0;  
+}
+
+span.caps {  
+	font-size:0.9em; 
+	letter-spacing:0.07em;  
+}
+
+p img {  
+	padding:0; 
+}
+
+.aligncenter, div.aligncenter, img.centered {  
+	display:block; 
+	margin:0px auto;  
+}
+
+img.alignleft {  
+	padding:4px; 
+	margin:0px 7px 2px 0px;  
+	display:inline;  
+}
+
+img.alignright {  
+	padding:4px; 
+	margin:0px 0px 2px 7px; 
+	display:inline;  
+}
+			
+span.caps {  
+	cursor:help;  
+}
+			
+.navigation {  	
+	display:block; 
+	text-align:center; 
+	margin-top:10px; 
+	margin-bottom:60px;  
+}
+
+.wp-caption { 
+	border:1px solid #ddd; 
+	text-align:center; 
+	background-color:#eee; 
+	padding:4px 0px 0px; 
+	margin: 10px;  
+}
+
+.wp-caption img {  
+	margin: 0; 
+	padding: 0; 
+	border: 0 none;  
+}
+
+.wp-caption p.wp-caption-text {  
+	font-size:11px; 
+	line-height:17px; 
+	padding:0px 4px 5px; 
+	margin: 0;  
+}
+div.smart-archives { 
+
+	font-family: Montserrat, sans-serif;
+	text-transform: uppercase;
+	font-size: 90%;
+
+}
+a.year-link {
+	padding-right: 5px;
+}
+label {
+	font-family: Montez, sans-serif;
+}
